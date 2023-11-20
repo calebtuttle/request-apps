@@ -1,5 +1,5 @@
 import { providers } from "ethers";
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ErrorBoundary, theme, RAlert, useMobile, Analytics } from "request-ui";
 
@@ -11,6 +11,7 @@ import {
   Box,
 } from "@material-ui/core";
 import { useWeb3React, Web3ReactProvider } from "@web3-react/core";
+import { initSilk } from "@silk-wallet/silk-wallet-sdk";
 
 import { RequestAppBar } from "./components/AppBar";
 import CreatePage from "./containers/CreatePage";
@@ -134,6 +135,13 @@ const AppInner: React.FC = () => {
 };
 
 const App = () => {
+
+  useEffect(() => {
+    const silk = initSilk()
+    // @ts-ignore
+    window.ethereum = silk
+  }, [])
+
   return (
     <ErrorBoundary
       stackdriverErrorReporterApiKey="AIzaSyBr5Ix9knr8FPzOmkB6QmcEs-E9fjReZj8"

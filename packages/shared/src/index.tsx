@@ -108,10 +108,13 @@ export const addEthereumChain = async (
 
   // first attempt to switch to that chain
   try {
+    console.log('switching chain to', chainId)
     return await library.send("wallet_switchEthereumChain", [
       { chainId: utils.hexValue(chainId) },
     ]);
-  } catch { }
+  } catch (err) {
+    console.error(err)
+  }
 
   if (!rpcUrls || rpcUrls.length === 0) {
     return null;

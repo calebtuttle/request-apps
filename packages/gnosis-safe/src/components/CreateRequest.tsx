@@ -51,7 +51,7 @@ const Header = () => {
       <RAlert
         severity="info"
         title="Compatibility notice"
-        message="This App only works with MetaMask"
+        message="This App only works with Silk"
       />
       <Spacer size={8} />
     </Box>

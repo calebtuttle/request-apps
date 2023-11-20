@@ -8,5 +8,6 @@
       "packages/create",
       "packages/pay"
     ]
-  }
+  },
+  "dependencies": {}
 }

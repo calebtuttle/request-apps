@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.46",
     "@requestnetwork/currency": "0.9.1-next.1887",
+    "@silk-wallet/silk-wallet-sdk": "^0.0.21",
     "@web3-react/core": "^6.0.7",
     "@web3-react/injected-connector": "^6.0.7",
     "ethers": "5.5.1",

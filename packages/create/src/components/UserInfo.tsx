@@ -1,7 +1,8 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import { RButton } from "request-ui";
-import MetamaskIcon from "../assets/img/metamask.png";
+// import MetamaskIcon from "../assets/img/metamask.png";
+import SilkLogo from "../assets/silk-logo.svg";
 import Dot from "./Dot";
 import { makeStyles } from "@material-ui/core";
 
@@ -39,7 +40,7 @@ const UserInfo = ({
       <Box className={classes.icon}>
         <Dot network={network} account={name} />
         <Box width={4} />
-        <img alt="" src={MetamaskIcon} width={48} height={48} />
+        <img alt="" src={SilkLogo} width={24} height={24} />
       </Box>
     );
   };

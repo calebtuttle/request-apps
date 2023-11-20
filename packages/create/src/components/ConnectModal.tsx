@@ -11,7 +11,8 @@ import {
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { Spacer, RButton } from "request-ui";
-import MetamaskIcon from "../assets/img/metamask.png";
+// import MetamaskIcon from "../assets/img/metamask.png";
+import SilkLogo from "../assets/silk-logo.svg";
 import { Spinner } from "./Spinner";
 
 const useStyles = makeStyles(theme => ({
@@ -63,7 +64,7 @@ export const ConnectModal: React.FC<{
             <Spinner style={{ width: 64, height: 64 }} />
             <Spacer size={8} />
             <Typography variant="body2">
-              Please connect your MetaMask account...
+              Please connect your Silk account...
             </Typography>
           </Box>
         ) : (
@@ -80,9 +81,9 @@ export const ConnectModal: React.FC<{
                 alignItems="center"
                 justifyContent="space-between"
               >
-                <img alt="" src={MetamaskIcon} width={48} height={48} />
-                <Typography variant="caption">Metamask</Typography>
-                <Box width={48} />
+                <img alt="" src={SilkLogo} width={24} height={24} />
+                <Typography variant="caption">Silk</Typography>
+                <Box width={24} />
               </Box>
             </RButton>
             <Spacer size={12} />

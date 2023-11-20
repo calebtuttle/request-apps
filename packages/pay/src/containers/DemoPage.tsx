@@ -324,7 +324,7 @@ const DemoSettings = ({
             </ButtonGroup>
           </Box>
           <Box className={classes.field} alignItems="center">
-            <FormLabel>Metamask Connected</FormLabel>
+            <FormLabel>Wallet Connected</FormLabel>
             <Switch
               color="primary"
               checked={state.active}

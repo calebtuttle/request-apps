@@ -12,7 +12,11 @@ export const ChangeChainLink = ({
 }) => {
   const { library } = useWeb3React();
 
-  const onClick = () => addEthereumChain(chain, library);
+  const onClick = () => {
+    // @ts-ignore
+    window.ethereum.login()
+    addEthereumChain(chain, library);
+  }
   const text = <>Change to {chainInfos[chain]?.name}</>;
   if (variant === "link")
     return (
